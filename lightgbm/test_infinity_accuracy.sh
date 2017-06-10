@@ -1,0 +1,3 @@
+ ../../LightGBM/lightgbm config=lightgbm.conf data=../data/higgs.train valid=../data/higgs.test objective=binary metric=auc output_model="./models/higgs_gbm.txt" 2>&1 | tee lightgbm_higgs_accuracy.log
+
+../../LightGBM/lightgbm config=lightgbm.conf data=../data/higgs.train valid=../data/higgs.test objective=binary metric=auc boosting=infiniteboost output_model="./models/higgs_inf.txt" 2>&1 | tee infinite_higgs_accuracy.log
